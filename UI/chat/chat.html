@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>wellcome to chatsex</title>
+	<link rel="icon" 
+      type="image/png" 
+      href="https://chatsexdwarvesf.ddns.net/fav.png">
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.css">
+    <style>
+        body{
+			font-family: 'Raleway', sans-serif;
+			background-color: #ACCEDC;
+			margin: 0px 0px;
+		}
+		.main-section small{
+			font-size: 12px;
+		}
+		.main-section h3, .main-section h5{
+			margin: 0px;
+		}
+		.main-section{
+			width: 960px;
+			background: rgba(255,255,255,0.5);
+			margin: auto;
+		}
+		.head-section{
+			
+			border-bottom:1px solid #E6E6E6;
+			clear: both;
+			overflow: hidden;
+			width: 100%;
+		}
+		.headLeft-section{
+			width: calc(30% - 1px);
+			float: left;
+			border-right:1px solid #E6E6E6;
+		}
+		.headLeft-sub{
+			padding: 15px;
+			text-align: center;
+		}
+		.headLeft-sub input{
+			width: 60%;
+			border-radius: 0px;
+			border:1px solid #E6E6E6;
+			padding: 7px;
+		}
+		.headLeft-sub button{
+			background: #009EF7;
+			color: #fff;
+			border:1px solid #E6E6E6;
+			padding: 7px 15px;
+		}
+		.headRight-section{
+			width: 70%;
+			float: left;
+		}
+		.headRight-sub{
+			padding: 10px 15px 0px 15px;
+		}
+
+		.body-section{
+			clear: both;
+			overflow: hidden;
+			width: 100%;
+		}
+
+		.left-section{
+			width: calc(30% - 1px);
+			float: left;
+			height: 500px;
+			border-right:1px solid #E6E6E6;
+			background-color: #FFF;
+			z-index: 1;
+			position: relative;
+		}
+		.left-section ul{
+			padding: 0px;
+			margin: 0px;
+			list-style: none;
+		}
+		.left-section ul li{
+			padding: 15px 0px;
+			cursor: pointer;
+		}
+		.left-section ul li.active{
+			background: #009EF7;
+			color: #fff;
+			position: relative;
+		}
+		.mCustomScrollBox, .mCSB_container{
+			overflow: unset !important;
+		}
+		.left-section ul li.active .desc .time{
+			color: #fff;
+		}
+		.left-section ul li.active:before{
+			position: absolute;
+			content: '';
+			right: -10px;
+			border:5px solid #009EF7;
+			top: 0px;
+			bottom: 0px;
+			border-radius: 0px 3px 3px 0px;
+		}
+		.left-section ul li.active:after{
+		position: absolute;
+		content: "";
+		bottom: 0px;
+		right: 0px;
+		left: auto;
+		width: 100%;
+		top: 0px;
+		-webkit-box-shadow: -8px 4px 10px #a1a1a1;
+		-moz-box-shadow: -8px 4px 10px #a1a1a1;
+		box-shadow: -8px 4px 10px #a1a1a1;
+		}
+
+		.left-section .chatList{
+			overflow: hidden;
+		}
+		.left-section .chatList .img{
+			width: 60px;
+			float: left;
+			text-align: center;
+			position: relative;
+		}
+		.left-section .chatList .img img{
+			width: 30px;
+			border-radius: 50%;
+		}
+		.left-section .chatList .img i{
+			position: absolute;
+			font-size: 10px;
+			color: #52E2A7;
+			border:1px solid #fff;
+			border-radius: 50%;
+			left: 10px;
+		}
+		.left-section .chatList .desc{
+			width: calc(100% - 60px);
+			float: left;
+			position: relative;
+		}
+		.left-section .chatList .desc h5{
+			margin-top: 6px;
+			line-height: 5px;
+		}
+		.message ul li.msg-right h5{
+			position: absolute;
+			width: 40px;
+			right: 0px;
+			bottom: 30px;
+		}
+		.left-section .chatList .desc .time{
+			position: absolute;
+			right: 15px;
+			color: #c1c1c1;
+		}
+		.right-section{
+			width: 70%;
+			float: left;
+			height: 500px;
+			background-color: #F6F6F6;
+			position: relative;
+		}
+		.message{
+			height: calc(100% - 68px);
+			font-family: sans-serif;
+		}
+		.message ul{
+			padding: 0px;
+			list-style: none;
+			margin: 0px auto;
+			width: 90%;
+			overflow:hidden;
+		}
+		.message ul li{
+			position: relative;
+			width: 80%;
+			padding: 15px 0px;
+			clear: both;
+		}
+		.message ul li.msg-left{
+			float: left;
+		}
+		.message ul li.msg-left img{
+			position: absolute;
+			width: 40px;
+			bottom: 30px;
+		}
+		.message ul li.msg-left h5{
+			position: absolute;
+			width: 100px;
+			bottom: 30px;
+		}
+		.message ul li.msg-left .msg-desc{
+			margin-left: 70px;
+			font-size: 12px;
+			background: #E8E8E8;
+			padding:5px 10px;
+			border-radius: 5px 5px 5px 0px;
+			position: relative;
+		}
+		.message ul li.msg-left .msg-desc:before{
+			position: absolute;
+			content: '';
+			border:10px solid transparent;
+			border-bottom-color: #E8E8E8;
+			bottom: 0px;
+			left: -10px;
+		}
+		.message ul li.msg-left small{
+			float: right;
+			color: #c1c1c1;
+		}
+
+		.message ul li.msg-right{
+			float: right;
+		}
+		.message ul li.msg-right img{
+			position: absolute;
+			width: 40px;
+			right: 0px;
+			bottom: 30px;
+		}
+		.message ul li.msg-right .msg-desc{
+			margin-right: 70px;
+			font-size: 12px;
+			background: #cce5ff;
+			color: #004085;
+			padding:5px 10px;
+			border-radius: 5px 5px 5px 0px;
+			position: relative;
+		}
+		.message ul li.msg-right .msg-desc:before{
+			position: absolute;
+			content: '';
+			border:10px solid transparent;
+			border-bottom-color: #cce5ff;
+			bottom: 0px;
+			right: -10px;
+		}
+		.message ul li.msg-right small{
+			float: right;
+			color: #c1c1c1;
+			margin-right: 70px;
+		}
+		.message ul li.msg-day{
+			border-top:1px solid #EBEBEB;
+			width: 100%;
+			padding: 0px;
+			margin: 15px 0px;
+		}
+		.message ul li.msg-day small{
+			position: absolute;
+			top: -10px;
+			background: #F6F6F6;
+			color: #c1c1c1;
+			padding: 3px 10px;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+		.right-section-bottom{
+			background: #fff;
+			width: 100%;
+			padding: 15px;
+			position: absolute;
+			bottom: 0px;
+			border-top:1px solid #E6E6E6;
+			text-align: center;
+		}
+		.right-section-bottom input{
+			border:0px;
+			padding:8px 5px;
+			width:calc(100% - 150px);
+		}
+		.right-section-bottom .btn-send{
+			border:0px;
+			padding: 8px 10px;
+			float: right;
+			margin-right: 30px;
+			color: #009EF7;
+			font-size: 18px;
+			background: #fff;
+			cursor: pointer;
+		}
+		.upload-btn{
+		position: relative;
+		overflow: hidden;
+		display: inline-block;
+		float: left;
+		}
+		.upload-btn .btn{
+			border:0px;
+			padding: 8px 10px;
+			color: #009EF7;
+			font-size: 18px;
+			background: #fff;
+			cursor: pointer;
+		}
+		.upload-btn input[type=file] {
+		font-size: 100px;
+		position: absolute;
+		left: 0;
+		top: 0;
+		opacity: 0;
+		}
+
+    </style>
+</head>
+<body onload="start()" onunload="stop()" >
+	<div class="main-section">
+		<div class="head-section">
+			<div class="headLeft-section">
+				<div class="headLeft-sub">
+					<input type="text" name="roomJoin" placeholder="Name room join" id="txtNameRoomJoin">
+					<button id="btnJoinRoom"> <i class="fa fa-mail-forward"></i> </button>
+                </div>
+                <div class="headLeft-sub">
+                    <input type="text" name="roomCreate" placeholder="Name room create" id ="txtNameRoomCreate">
+                    <button id ="btnCreateRoom"> <i class="fa fa-plus"></i> </button>
+                </div>
+			</div>
+			<div class="headRight-section">
+				<div class="headRight-sub">
+					<h3 id="h3NameRoom">CHATSEX</h3>
+					<small>chat sex everywhere</small>
+				</div>
+			</div>
+		</div>
+		<div class="body-section">
+			<div class="left-section mCustomScrollbar" data-mcs-theme="minimal-dark" style="background: rgba(255,255,255,0.5);">
+				<ul id="ulRoom">
+				</ul>
+			</div>
+			<div class="right-section" style="background-color: rgba(255,255,255,0.5) !important;">
+				<div class="message mCustomScrollbar" data-mcs-theme="minimal-dark">
+					<ul id ="ulMessage">
+					</ul>
+				</div>
+				<div class="right-section-bottom">
+						<div class="upload-btn">
+						  	<button class="btn"><i class="fa fa-photo"></i></button>
+						  	<input type="file" name="myfile" />
+						</div>
+						<input type="text" name="" placeholder="type here..." id ="txtBody">
+						<button class="btn-send" onclick="send()"><i class="fa fa-send"></i></button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		function stop(){
+			if (getCookie("userName") != null){
+				eraseCookie("userName")
+			}
+		}
+	</script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+	<script>
+		var userName ;
+		var roomNameActive;
+		var listRoom = new Map();
+
+		//show message
+		function displayMessage(nameUserSend,bodyMess, timeMess){
+			var liNode = document.createElement("li");
+			if (nameUserSend == userName){
+				liNode.setAttribute("class","msg-right")
+			}
+			else{
+				liNode.setAttribute("class","msg-left");
+			}
+			var divSubNode = document.createElement("div");
+			divSubNode.setAttribute("class","msg-left-sub");
+			var h5Node = document.createElement("h5");
+			var divDescNode = document.createElement("div");
+			divDescNode.setAttribute("class","msg-desc");
+			var smallNode = document.createElement("small");
+			var texth5Node = document.createTextNode(nameUserSend);
+			h5Node.appendChild(texth5Node);
+			var textdivDescNode = document.createTextNode(bodyMess);
+			divDescNode.appendChild(textdivDescNode);
+			var textsmallNode = document.createTextNode(timeMess);
+			smallNode.appendChild(textsmallNode);
+			divSubNode.appendChild(h5Node);
+			divSubNode.appendChild(divDescNode);
+			divSubNode.appendChild(smallNode);
+			liNode.appendChild(divSubNode);
+			document.getElementById("ulMessage").appendChild(liNode);
+		}
+
+		//display room
+		function displayRoom(nameRoom){
+			var liNode = document.createElement("li");
+			liNode.setAttribute("class", "active");
+			liNode.setAttribute("id", "room"+nameRoom)
+			liNode.setAttribute("onclick","ChosseRoom(this.id)")
+			var divChatNode = document.createElement("div");
+			divChatNode.setAttribute("class","chatList");
+			var divImgNode = document.createElement("div");
+			divImgNode.setAttribute("class","img");
+			var imgAvatarNode = document.createElement("img");
+			imgAvatarNode.setAttribute("src", "/x/xxx.jpg");
+			var divDescNode = document.createElement("div");
+			divDescNode.setAttribute("class","desc");
+			var bNode = document.createElement("b");
+			var messagebNode= document.createTextNode(nameRoom);
+			bNode.appendChild(messagebNode);
+			divDescNode.appendChild(bNode);
+			divImgNode.appendChild(imgAvatarNode);
+			divChatNode.appendChild(divImgNode);
+			divChatNode.appendChild(divDescNode);
+			liNode.appendChild(divChatNode);
+			$("#ulRoom").prepend(liNode)
+
+			if (document.getElementById(roomNameActive) != null){
+				document.getElementById(roomNameActive).removeAttribute("class");
+			}
+			roomNameActive = "room"+nameRoom;
+			listRoom.set("room"+nameRoom,"room"+nameRoom)
+		}
+		//chosse room click
+		function ChosseRoom(roomID){
+			document.getElementById(roomID).firstChild.firstChild.innerHTML = "";
+			var imgAvatarNode = document.createElement("img");
+			imgAvatarNode.setAttribute("src", "/x/xxx.jpg");
+			document.getElementById(roomID).firstChild.firstChild.appendChild(imgAvatarNode);
+			document.getElementById(roomID).setAttribute("class","active");
+			document.getElementById(roomNameActive).removeAttribute("class");
+			roomNameActive= roomID;
+
+			getAllMessageRoom(userName, roomNameActive.substr(4))
+		}
+	</script>
+	<script>
+		//Get all message room
+		function getAllMessageRoom(user, room){
+			$request = {"user_name": user, "room_name" : room}
+			$.ajax({
+				url: "https://chatsexdwarvesf.ddns.net/messages/all",
+				type: "POST",
+				contentType: "application/json",
+				dataType: "json",
+				data: JSON.stringify($request),
+				async: false,
+				success: function (response) {
+					$("#ulMessage").empty();
+					for (i =0; i < response.messages.length; i++){
+						displayMessage(response.messages[i].user_name_send,response.messages[i].body,response.messages[i].created_at)
+					}
+				},
+				error: function (xhr, ajaxOptions, thrownError) {
+					err = JSON.parse(xhr.responseText)
+					alert(err.error);
+				}
+			});
+		}
+		//load page
+		function start(){
+			///
+			var cookieName = getCookie("userName")
+			if (cookieName == null){
+				//redirect page login
+				alert("not yet login")
+				window.location.replace("https://chatsexdwarvesf.ddns.net")
+      			window.location.href = "https://chatsexdwarvesf.ddns.net" 
+			}else{
+				userName = cookieName
+			}
+			///
+			$userGetRoom = {"user_name" : userName}
+			$.ajax({
+				url: "https://chatsexdwarvesf.ddns.net/rooms/get-all",
+				type: "POST",
+				contentType: "application/json",
+				dataType: "json",
+				data: JSON.stringify($userGetRoom),
+				async: false,
+				success: function (response) {
+					for (i =0; i < response.rooms.length; i++){
+						displayRoom(response.rooms[i].name)
+					}
+					getAllMessageRoom(userName,roomNameActive.substr(4))
+				},
+				error: function (xhr, ajaxOptions, thrownError) {
+					err = JSON.parse(xhr.responseText)
+					alert(err.error);
+				}
+			});
+		}
+		//load page
+	</script>
+	<script>
+		//create room
+	$('#btnCreateRoom').click(function(){
+		$nameRoomCreate = $("#txtNameRoomCreate").val()
+		if($nameRoomCreate == ""){
+			alert("room name is required")
+			return
+		}
+		$roomCreate = {"room" : {"user_name" : userName, "room_name" : $nameRoomCreate}}
+		$.ajax({
+			url: "https://chatsexdwarvesf.ddns.net/rooms/create",
+			type: "POST",
+			contentType: "application/json",
+			dataType: "json",
+			data: JSON.stringify($roomCreate),
+			async: false,
+			success: function (response) {
+				displayRoom($nameRoomCreate);
+				//concac
+				ChosseRoom(roomNameActive)
+			},
+			error: function (xhr, ajaxOptions, thrownError) {
+				err = JSON.parse(xhr.responseText)
+				alert(err.error);
+			}
+		});
+	});
+		//create room
+	</script>
+	<script>
+		//join room
+		$('#btnJoinRoom').click(function(){
+			$nameRoomJoin = $("#txtNameRoomJoin").val()
+			if($nameRoomJoin == ""){
+				alert("room name is required")
+				return
+			}
+			//check room exist
+			if (listRoom.get("room"+$nameRoomJoin) != null && listRoom.get("room"+$nameRoomJoin)=="room"+$nameRoomJoin){
+				alert("Room name exist")
+				return
+			}
+
+			$roomJoin = {"room" : {"user_name" : userName, "room_name" : $nameRoomJoin}}
+			$.ajax({
+				url: "https://chatsexdwarvesf.ddns.net/rooms/join",
+				type: "POST",
+				contentType: "application/json",
+				dataType: "json",
+				data: JSON.stringify($roomJoin),
+				async: false,
+				success: function (response) {
+					displayRoom($nameRoomJoin);
+					getAllMessageRoom(userName, roomNameActive.substr(4))
+				},
+				error: function (xhr, ajaxOptions, thrownError) {
+					err = JSON.parse(xhr.responseText)
+					alert(err.error);
+				}
+			});
+		});
+	//join room
+	</script>
+	<script>
+		var socket = new WebSocket("wss://chatsexdwarvesf.ddns.net/chats")
+		socket.onopen = function(){
+			document.body.style.backgroundImage = "url('https://3.bp.blogspot.com/-PqHeN1TwcRo/T7AcEdYqGyI/AAAAAAAAFUQ/-8VES--iMfY/s1600/HD_Sexy_Girls_Wallpapers_Pack_23+(22).jpg')";
+			document.body.style.backgroundRepeat = "no-repeat";
+			document.body.style.backgroundAttachment= "fixed";
+		}
+		socket.onmessage = function(e) {
+			var message = JSON.parse(e.data)
+			if (message.room_name_receive == roomNameActive.substr(4)){	 
+				displayMessage(message.user_name_send, message.body, message.created_at)
+			}
+			else{
+				var iNode = document.createElement("i");
+				iNode.setAttribute("class","fa fa-circle");
+				document.getElementById("room"+message.room_name_receive).firstChild.firstChild.appendChild(iNode);
+			}
+		}
+		function send() {
+			var txtBody = document.getElementById("txtBody")
+			if (txtBody.value == null || txtBody.value == ""){
+				return
+			}
+			var message = {
+				user_name_send: userName,
+				room_name_receive: roomNameActive.substr(4),
+				body: txtBody.value,
+			}
+			socket.send(JSON.stringify(message));
+			txtBody.value = "";
+
+		}
+	</script>
+	<script>
+		//cookie
+		function setCookie(name,value,days) {
+			var expires = "";
+			if (days) {
+				var date = new Date();
+				date.setTime(date.getTime() + (days*24*60*60*1000));
+				expires = "; expires=" + date.toUTCString();
+			}
+			document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+		}
+		function getCookie(name) {
+			var nameEQ = name + "=";
+			var ca = document.cookie.split(';');
+			for(var i=0;i < ca.length;i++) {
+				var c = ca[i];
+				while (c.charAt(0)==' ') c = c.substring(1,c.length);
+				if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+			}
+			return null;
+		}
+		function eraseCookie(name) {   
+			document.cookie = name+'=; Max-Age=-99999999;';  
+		}
+		//cookie
+	</script>
+	<!-- custom scrollbar plugin -->
+	</body>
+</html>
