@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/chatsex/domain"
+	"github.com/chatrealtime/domain"
 	"github.com/gorilla/websocket"
 )
 

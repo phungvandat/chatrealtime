@@ -6,7 +6,7 @@ services:
     image: postgres:10.4
     restart: always
     environment:
-      POSTGRES_PASSWORD: chatsexeverywhere
+      POSTGRES_PASSWORD: chatrealtimeeverywhere
       POSTGRES_DB: chat-sex
 
     ports:
@@ -16,7 +16,7 @@ services:
     image: postgres:10.4
     restart: always
     environment:
-      POSTGRES_PASSWORD: chatsexeverywhere
+      POSTGRES_PASSWORD: chatrealtimeeverywhere
       POSTGRES_DB: chat-sex-test
 
     ports:

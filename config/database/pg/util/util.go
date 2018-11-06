@@ -8,7 +8,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/chatsex/domain"
+	"github.com/chatrealtime/domain"
 	"github.com/jinzhu/gorm"
 	_ "github.com/lib/pq" //postgres server
 )

@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	"net/http"
 
-	userEndpoint "github.com/chatsex/endpoints/user"
+	userEndpoint "github.com/chatrealtime/endpoints/user"
 )
 
 func RegisterRequest(_ context.Context, r *http.Request) (interface{}, error) {

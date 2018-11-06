@@ -3,7 +3,7 @@ package room
 import (
 	"context"
 
-	"github.com/chatsex/domain"
+	"github.com/chatrealtime/domain"
 )
 
 type Service interface {

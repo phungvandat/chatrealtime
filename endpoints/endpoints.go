@@ -1,10 +1,10 @@
 package endpoints
 
 import (
-	"github.com/chatsex/endpoints/message"
-	"github.com/chatsex/endpoints/room"
-	"github.com/chatsex/endpoints/user"
-	"github.com/chatsex/service"
+	"github.com/chatrealtime/endpoints/message"
+	"github.com/chatrealtime/endpoints/room"
+	"github.com/chatrealtime/endpoints/user"
+	"github.com/chatrealtime/service"
 	"github.com/go-kit/kit/endpoint"
 )
 

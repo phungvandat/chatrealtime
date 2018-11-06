@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	"net/http"
 
-	messageEndpoint "github.com/chatsex/endpoints/message"
+	messageEndpoint "github.com/chatrealtime/endpoints/message"
 )
 
 func CreateRequest(_ context.Context, r *http.Request) (interface{}, error) {

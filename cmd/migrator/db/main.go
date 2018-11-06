@@ -4,7 +4,7 @@ import (
 	"database/sql"
 	"errors"
 
-	"github.com/chatsex/cmd/migrator/config"
+	"github.com/chatrealtime/cmd/migrator/config"
 )
 
 const (

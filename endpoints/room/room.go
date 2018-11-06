@@ -3,8 +3,8 @@ package room
 import (
 	"context"
 
-	"github.com/chatsex/domain"
-	"github.com/chatsex/service"
+	"github.com/chatrealtime/domain"
+	"github.com/chatrealtime/service"
 	"github.com/go-kit/kit/endpoint"
 )
 

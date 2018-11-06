@@ -1,9 +1,9 @@
 package service
 
 import (
-	"github.com/chatsex/service/message"
-	"github.com/chatsex/service/room"
-	"github.com/chatsex/service/user"
+	"github.com/chatrealtime/service/message"
+	"github.com/chatrealtime/service/room"
+	"github.com/chatrealtime/service/user"
 )
 
 type Service struct {

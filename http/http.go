@@ -4,12 +4,12 @@ import (
 	l "log"
 	"net/http"
 
-	"github.com/chatsex/websoc"
+	"github.com/chatrealtime/websoc"
 
-	"github.com/chatsex/endpoints"
-	messageDecode "github.com/chatsex/http/decode/message"
-	roomDecode "github.com/chatsex/http/decode/room"
-	userDecode "github.com/chatsex/http/decode/user"
+	"github.com/chatrealtime/endpoints"
+	messageDecode "github.com/chatrealtime/http/decode/message"
+	roomDecode "github.com/chatrealtime/http/decode/room"
+	userDecode "github.com/chatrealtime/http/decode/user"
 	"github.com/go-chi/chi"
 	"github.com/go-chi/cors"
 	"github.com/go-kit/kit/log"

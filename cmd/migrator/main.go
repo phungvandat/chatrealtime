@@ -9,8 +9,8 @@ import (
 	"github.com/pressly/goose"
 
 	// Init DB drivers.
-	"github.com/chatsex/cmd/migrator/config"
-	dbconn "github.com/chatsex/cmd/migrator/db"
+	"github.com/chatrealtime/cmd/migrator/config"
+	dbconn "github.com/chatrealtime/cmd/migrator/db"
 )
 
 var (

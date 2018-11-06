@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>wellcome to chatsex</title>
+	<title>wellcome to chatrealtime</title>
 	<link rel="icon" 
       type="image/png" 
-      href="https://chatsexdwarvesf.ddns.net/fav.png">
+      href="https://chatrealtimedwarvesf.ddns.net/fav.png">
 	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.css">
@@ -326,7 +326,7 @@
 			</div>
 			<div class="headRight-section">
 				<div class="headRight-sub">
-					<h3 id="h3NameRoom">CHATSEX</h3>
+					<h3 id="h3NameRoom">chatrealtime</h3>
 					<small>chat sex everywhere</small>
 				</div>
 			</div>
@@ -441,7 +441,7 @@
 		function getAllMessageRoom(user, room){
 			$request = {"user_name": user, "room_name" : room}
 			$.ajax({
-				url: "https://chatsexdwarvesf.ddns.net/messages/all",
+				url: "https://chatrealtimedwarvesf.ddns.net/messages/all",
 				type: "POST",
 				contentType: "application/json",
 				dataType: "json",
@@ -466,15 +466,15 @@
 			if (cookieName == null){
 				//redirect page login
 				alert("not yet login")
-				window.location.replace("https://chatsexdwarvesf.ddns.net")
-      			window.location.href = "https://chatsexdwarvesf.ddns.net" 
+				window.location.replace("https://chatrealtimedwarvesf.ddns.net")
+      			window.location.href = "https://chatrealtimedwarvesf.ddns.net" 
 			}else{
 				userName = cookieName
 			}
 			///
 			$userGetRoom = {"user_name" : userName}
 			$.ajax({
-				url: "https://chatsexdwarvesf.ddns.net/rooms/get-all",
+				url: "https://chatrealtimedwarvesf.ddns.net/rooms/get-all",
 				type: "POST",
 				contentType: "application/json",
 				dataType: "json",
@@ -504,7 +504,7 @@
 		}
 		$roomCreate = {"room" : {"user_name" : userName, "room_name" : $nameRoomCreate}}
 		$.ajax({
-			url: "https://chatsexdwarvesf.ddns.net/rooms/create",
+			url: "https://chatrealtimedwarvesf.ddns.net/rooms/create",
 			type: "POST",
 			contentType: "application/json",
 			dataType: "json",
@@ -539,7 +539,7 @@
 
 			$roomJoin = {"room" : {"user_name" : userName, "room_name" : $nameRoomJoin}}
 			$.ajax({
-				url: "https://chatsexdwarvesf.ddns.net/rooms/join",
+				url: "https://chatrealtimedwarvesf.ddns.net/rooms/join",
 				type: "POST",
 				contentType: "application/json",
 				dataType: "json",
@@ -558,7 +558,7 @@
 	//join room
 	</script>
 	<script>
-		var socket = new WebSocket("wss://chatsexdwarvesf.ddns.net/chats")
+		var socket = new WebSocket("wss://s.ddns.net/chats")
 		socket.onopen = function(){
 			document.body.style.backgroundImage = "url('https://3.bp.blogspot.com/-PqHeN1TwcRo/T7AcEdYqGyI/AAAAAAAAFUQ/-8VES--iMfY/s1600/HD_Sexy_Girls_Wallpapers_Pack_23+(22).jpg')";
 			document.body.style.backgroundRepeat = "no-repeat";

@@ -6,8 +6,8 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/chatsex/domain"
-	"github.com/chatsex/service"
+	"github.com/chatrealtime/domain"
+	"github.com/chatrealtime/service"
 	"github.com/gorilla/websocket"
 )
 

@@ -2,10 +2,10 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>wellcome to chatsex</title>
+  <title>wellcome to chatrealtime</title>
 	<link rel="icon" 
       type="image/png" 
-      href="https://chatsexdwarvesf.ddns.net/fav.png">
+      href="https://chatrealtimedwarvesf.ddns.net/fav.png">
       <style>
       @import url(https://fonts.googleapis.com/css?family=Roboto:300);
       body{
@@ -148,8 +148,8 @@ body {
   function start(){
     var cookieName = getCookie("userName")
     if (cookieName != null){
-      window.location.replace("https://chatsexdwarvesf.ddns.net/messages")
-      window.location.href = "https://chatsexdwarvesf.ddns.net/messages" 
+      window.location.replace("https://chatrealtimedwarvesf.ddns.net/messages")
+      window.location.href = "https://chatrealtimedwarvesf.ddns.net/messages" 
     }
   }
 </script>
@@ -172,7 +172,7 @@ body {
       }
       $userJson = {"user" : {"name" : $nameR, "password" : $passR, "phone_number" : $phoneR}}
       $.ajax({
-        url: "https://chatsexdwarvesf.ddns.net/users/register",
+        url: "https://chatrealtimedwarvesf.ddns.net/users/register",
         type: "POST",
         contentType: "application/json",
         dataType: "json",
@@ -208,7 +208,7 @@ $('#btnLogIn').click(function(e){
       }
       $userLoginJson = {"user" : {"name" : $name, "password" : $pass}}
       $.ajax({
-        url: "https://chatsexdwarvesf.ddns.net/users/login",
+        url: "https://chatrealtimedwarvesf.ddns.net/users/login",
         type: "POST",
         contentType: "application/json",
         dataType: "json",
@@ -216,8 +216,8 @@ $('#btnLogIn').click(function(e){
         async: false,
         success: function (response) {
           setCookie("userName",response.user.name,1)
-          window.location.replace("https://chatsexdwarvesf.ddns.net/messages")
-          window.location.href = "https://chatsexdwarvesf.ddns.net/messages" 
+          window.location.replace("https://chatrealtimedwarvesf.ddns.net/messages")
+          window.location.href = "https://chatrealtimedwarvesf.ddns.net/messages" 
         },
         error: function (xhr, ajaxOptions, thrownError) {
           err = JSON.parse(xhr.responseText)

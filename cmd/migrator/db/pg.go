@@ -7,7 +7,7 @@ import (
 	"github.com/jinzhu/gorm"
 	_ "github.com/lib/pq" // driver for open postgres connection
 
-	"github.com/chatsex/cmd/migrator/config"
+	"github.com/chatrealtime/cmd/migrator/config"
 )
 
 // PGConnector store implement open for postgres
@@ -27,7 +27,7 @@ func (c *PGConnector) Open(cfg *config.Config) (*sql.DB, error) {
 		"postgres",
 		"chat-sex",
 		sslmode,
-		"chatsexeverywhere",
+		"chatrealtimeeverywhere",
 		"localhost",
 		"5432",
 	)
