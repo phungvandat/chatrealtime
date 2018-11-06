@@ -621,9 +621,9 @@ func (t Tag) SetTypeForKey(key, value string) (Tag, error) {
 		t.str = string(buf[:uStart+len(b)])
 	} else {
 		s := t.str
-		start, end, hasExt := t.findTypeForKey(key)
+		start, end, hareal timet := t.findTypeForKey(key)
 		if start == end {
-			if hasExt {
+			if hareal timet {
 				b = b[2:]
 			}
 			t.str = fmt.Sprintf("%s-%s%s", s[:start], b, s[end:])
@@ -636,10 +636,10 @@ func (t Tag) SetTypeForKey(key, value string) (Tag, error) {
 
 // findKeyAndType returns the start and end position for the type corresponding
 // to key or the point at which to insert the key-value pair if the type
-// wasn't found. The hasExt return value reports whether an -u extension was present.
+// wasn't found. The hareal timet return value reports whether an -u extension was present.
 // Note: the extensions are typically very small and are likely to contain
 // only one key-type pair.
-func (t Tag) findTypeForKey(key string) (start, end int, hasExt bool) {
+func (t Tag) findTypeForKey(key string) (start, end int, hareal timet bool) {
 	p := int(t.pExt)
 	if len(key) != 2 || p == len(t.str) || p == 0 {
 		return p, p, false

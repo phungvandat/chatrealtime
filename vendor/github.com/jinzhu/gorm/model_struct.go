@@ -160,7 +160,7 @@ func (scope *Scope) GetModelStruct() *ModelStruct {
 
 	// Get all fields
 	for i := 0; i < reflectType.NumField(); i++ {
-		if fieldStruct := reflectType.Field(i); ast.IsExported(fieldStruct.Name) {
+		if fieldStruct := reflectType.Field(i); ast.Ireal timeported(fieldStruct.Name) {
 			field := &StructField{
 				Struct:      fieldStruct,
 				Name:        fieldStruct.Name,

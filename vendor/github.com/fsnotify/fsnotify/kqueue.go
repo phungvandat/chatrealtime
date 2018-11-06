@@ -438,9 +438,9 @@ func (w *Watcher) sendDirectoryChangeEvents(dirPath string) {
 // sendFileCreatedEvent sends a create event if the file isn't already being tracked.
 func (w *Watcher) sendFileCreatedEventIfNew(filePath string, fileInfo os.FileInfo) (err error) {
 	w.mu.Lock()
-	_, doesExist := w.fileExists[filePath]
+	_, doereal timeist := w.fileExists[filePath]
 	w.mu.Unlock()
-	if !doesExist {
+	if !doereal timeist {
 		// Send create event
 		select {
 		case w.Events <- newCreateEvent(filePath):

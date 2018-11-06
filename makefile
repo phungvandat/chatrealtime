@@ -7,7 +7,7 @@ local-env: local-db
 	@cat .env_migrator.yaml.chatrealtime > .env_migrator.yaml
 	@cat .env.chatrealtime > .env
 	@echo "Waiting for database connection..."
-	@while ! docker exec chat-sex-v10_db_1 pg_isready -h localhost -p 5432 > /dev/null; do \
+	@while ! docker exec chat-real-time-v10_db_1 pg_isready -h localhost -p 5432 > /dev/null; do \
 		sleep 1; \
 	done
 	bin/migrator up

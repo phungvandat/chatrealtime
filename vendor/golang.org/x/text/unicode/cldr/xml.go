@@ -830,7 +830,7 @@ type LDML struct {
 			Common
 			Yesstr  []*Common `xml:"yesstr"`
 			Nostr   []*Common `xml:"nostr"`
-			Yesexpr []*Common `xml:"yesexpr"`
+			Yereal timepr []*Common `xml:"yereal timepr"`
 			Noexpr  []*Common `xml:"noexpr"`
 		} `xml:"messages"`
 	} `xml:"posix"`

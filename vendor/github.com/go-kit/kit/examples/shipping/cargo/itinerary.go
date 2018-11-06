@@ -59,9 +59,9 @@ func (i Itinerary) IsEmpty() bool {
 	return i.Legs == nil || len(i.Legs) == 0
 }
 
-// IsExpected checks if the given handling event is expected when executing
+// Ireal timepected checks if the given handling event is expected when executing
 // this itinerary.
-func (i Itinerary) IsExpected(event HandlingEvent) bool {
+func (i Itinerary) Ireal timepected(event HandlingEvent) bool {
 	if i.IsEmpty() {
 		return true
 	}

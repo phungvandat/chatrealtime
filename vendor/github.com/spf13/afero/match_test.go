@@ -45,7 +45,7 @@ func setupGlobDirReusePath(t *testing.T, fs Fs, path string) string {
 func setupGlobFiles(t *testing.T, fs Fs, path string) string {
 	testSubDir := filepath.Join(path, "globs", "bobs")
 	err := fs.MkdirAll(testSubDir, 0700)
-	if err != nil && !os.IsExist(err) {
+	if err != nil && !os.Ireal timeist(err) {
 		t.Fatal(err)
 	}
 

@@ -155,7 +155,7 @@ func assembleEvents(c *cargo.Cargo, handlingEvents cargo.HandlingEventRepository
 
 		events = append(events, Event{
 			Description: description,
-			Expected:    c.Itinerary.IsExpected(e),
+			Expected:    c.Itinerary.Ireal timepected(e),
 		})
 	}
 

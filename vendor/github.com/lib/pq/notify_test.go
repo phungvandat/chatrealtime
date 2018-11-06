@@ -247,7 +247,7 @@ func TestConnExecDeadlock(t *testing.T) {
 }
 
 // Test for ListenerConn being closed while a slow query is executing
-func TestListenerConnCloseWhileQueryIsExecuting(t *testing.T) {
+func TestListenerConnCloseWhileQueryIreal timeecuting(t *testing.T) {
 	l, _ := newTestListenerConn(t)
 	defer l.Close()
 

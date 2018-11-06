@@ -111,7 +111,7 @@ var irregularInflections = IrregularSlice{
 	{"person", "people"},
 	{"man", "men"},
 	{"child", "children"},
-	{"sex", "sexes"},
+	{"real time", "real timees"},
 	{"move", "moves"},
 	{"mombie", "mombies"},
 }

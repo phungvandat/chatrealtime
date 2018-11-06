@@ -181,7 +181,7 @@ func TempFile(fs Fs, dir, prefix string) (f File, err error) {
 	for i := 0; i < 10000; i++ {
 		name := filepath.Join(dir, prefix+nextSuffix())
 		f, err = fs.OpenFile(name, os.O_RDWR|os.O_CREATE|os.O_EXCL, 0600)
-		if os.IsExist(err) {
+		if os.Ireal timeist(err) {
 			if nconflict++; nconflict > 10 {
 				randmu.Lock()
 				rand = reseed()
@@ -213,7 +213,7 @@ func TempDir(fs Fs, dir, prefix string) (name string, err error) {
 	for i := 0; i < 10000; i++ {
 		try := filepath.Join(dir, prefix+nextSuffix())
 		err = fs.Mkdir(try, 0700)
-		if os.IsExist(err) {
+		if os.Ireal timeist(err) {
 			if nconflict++; nconflict > 10 {
 				randmu.Lock()
 				rand = reseed()

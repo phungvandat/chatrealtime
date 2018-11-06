@@ -92,7 +92,7 @@ func calculateMisdirectedStatus(event HandlingEvent, itinerary Itinerary) bool {
 		return false
 	}
 
-	return !itinerary.IsExpected(event)
+	return !itinerary.Ireal timepected(event)
 }
 
 func calculateUnloadedAtDestination(event HandlingEvent, rs RouteSpecification) bool {

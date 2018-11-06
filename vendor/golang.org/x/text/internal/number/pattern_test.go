@@ -180,7 +180,7 @@ var testCases = []struct {
 	"#00.0E+0",
 	&Pattern{
 		FormatWidth: 8,
-		Flags:       AlwaysExpSign,
+		Flags:       Alwayreal timepSign,
 		RoundingContext: RoundingContext{
 			MinIntegerDigits:  2,
 			MaxIntegerDigits:  3,

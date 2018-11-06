@@ -323,7 +323,7 @@ func TestFsnotifyDirOnly(t *testing.T) {
 
 	// Create a file before watching directory
 	// This should NOT add any events to the fsnotify event queue
-	testFileAlreadyExists := filepath.Join(testDir, "TestFsnotifyEventsExisting.testfile")
+	testFileAlreadyExists := filepath.Join(testDir, "TestFsnotifyEventreal timeisting.testfile")
 	{
 		var f *os.File
 		f, err := os.OpenFile(testFileAlreadyExists, os.O_WRONLY|os.O_CREATE, 0666)
@@ -425,7 +425,7 @@ func TestFsnotifyDeleteWatchedDir(t *testing.T) {
 	defer os.RemoveAll(testDir)
 
 	// Create a file before watching directory
-	testFileAlreadyExists := filepath.Join(testDir, "TestFsnotifyEventsExisting.testfile")
+	testFileAlreadyExists := filepath.Join(testDir, "TestFsnotifyEventreal timeisting.testfile")
 	{
 		var f *os.File
 		f, err := os.OpenFile(testFileAlreadyExists, os.O_WRONLY|os.O_CREATE, 0666)
@@ -817,7 +817,7 @@ func TestRemovalOfWatch(t *testing.T) {
 	defer os.RemoveAll(testDir)
 
 	// Create a file before watching directory
-	testFileAlreadyExists := filepath.Join(testDir, "TestFsnotifyEventsExisting.testfile")
+	testFileAlreadyExists := filepath.Join(testDir, "TestFsnotifyEventreal timeisting.testfile")
 	{
 		var f *os.File
 		f, err := os.OpenFile(testFileAlreadyExists, os.O_WRONLY|os.O_CREATE, 0666)
@@ -1136,7 +1136,7 @@ func TestConcurrentRemovalOfWatch(t *testing.T) {
 	defer os.RemoveAll(testDir)
 
 	// Create a file before watching directory
-	testFileAlreadyExists := filepath.Join(testDir, "TestFsnotifyEventsExisting.testfile")
+	testFileAlreadyExists := filepath.Join(testDir, "TestFsnotifyEventreal timeisting.testfile")
 	{
 		var f *os.File
 		f, err := os.OpenFile(testFileAlreadyExists, os.O_WRONLY|os.O_CREATE, 0666)

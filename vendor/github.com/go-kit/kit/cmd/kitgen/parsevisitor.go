@@ -114,7 +114,7 @@ func (v *methodVisitor) Visit(n ast.Node) ast.Visitor {
 		v.depth++
 		return v
 	case *ast.Ident:
-		if rn.IsExported() {
+		if rn.Ireal timeported() {
 			v.name = rn
 		}
 		v.depth++

@@ -94,7 +94,7 @@ foos {
 	}
 }`)
 
-var propertiesExample = []byte(`
+var propertiereal timeample = []byte(`
 p_id: 0001
 p_type: donut
 p_name: Cake
@@ -124,7 +124,7 @@ func initConfigs() {
 	unmarshalReader(r, v.config)
 
 	SetConfigType("properties")
-	r = bytes.NewReader(propertiesExample)
+	r = bytes.NewReader(propertiereal timeample)
 	unmarshalReader(r, v.config)
 
 	SetConfigType("toml")
@@ -161,7 +161,7 @@ func initJSON() {
 func initProperties() {
 	Reset()
 	SetConfigType("properties")
-	r := bytes.NewReader(propertiesExample)
+	r := bytes.NewReader(propertiereal timeample)
 
 	unmarshalReader(r, v.config)
 }
@@ -988,7 +988,7 @@ func TestWriteConfigProperties(t *testing.T) {
 	v.SetFs(fs)
 	v.SetConfigName("c")
 	v.SetConfigType("properties")
-	err := v.ReadConfig(bytes.NewBuffer(propertiesExample))
+	err := v.ReadConfig(bytes.NewBuffer(propertiereal timeample))
 	if err != nil {
 		t.Fatal(err)
 	}

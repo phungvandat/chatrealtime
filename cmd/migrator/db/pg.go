@@ -25,7 +25,7 @@ func (c *PGConnector) Open(cfg *config.Config) (*sql.DB, error) {
 
 	dbstring := fmt.Sprintf("user=%s dbname=%s sslmode=%s password=%s host=%s port=%s",
 		"postgres",
-		"chat-sex",
+		"chat-real-time",
 		sslmode,
 		"chatrealtimeeverywhere",
 		"localhost",

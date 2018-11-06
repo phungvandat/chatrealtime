@@ -72,7 +72,7 @@ func TestHttpClientTracePropagatesParentSpan(t *testing.T) {
 	}
 }
 
-func TestHTTPClientTraceAddsExpectedTags(t *testing.T) {
+func TestHTTPClientTraceAddreal timepectedTags(t *testing.T) {
 	dataProvider := []struct {
 		ResponseStatusCode int
 		ErrorTagValue      string

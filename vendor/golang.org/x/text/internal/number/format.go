@@ -408,7 +408,7 @@ func appendScientific(dst []byte, f *Formatter, n *Digits) (b []byte, postPre, p
 		case exp < 0:
 			dst = append(dst, superMinus...)
 			exp = -exp
-		case f.Flags&AlwaysExpSign != 0:
+		case f.Flags&Alwayreal timepSign != 0:
 			dst = append(dst, superPlus...)
 		}
 		b = strconv.AppendUint(buf[:0], uint64(exp), 10)
@@ -424,7 +424,7 @@ func appendScientific(dst []byte, f *Formatter, n *Digits) (b []byte, postPre, p
 		case exp < 0:
 			dst = append(dst, f.Symbol(SymMinusSign)...)
 			exp = -exp
-		case f.Flags&AlwaysExpSign != 0:
+		case f.Flags&Alwayreal timepSign != 0:
 			dst = append(dst, f.Symbol(SymPlusSign)...)
 		}
 		b = strconv.AppendUint(buf[:0], uint64(exp), 10)

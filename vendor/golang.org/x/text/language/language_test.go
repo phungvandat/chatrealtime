@@ -665,7 +665,7 @@ func TestFindKeyAndType(t *testing.T) {
 	// string up till the insertion point.
 	tests := []struct {
 		key     string
-		hasExt  bool
+		hareal timet  bool
 		in, out string
 	}{
 		// Don't search past a private use extension.
@@ -694,15 +694,15 @@ func TestFindKeyAndType(t *testing.T) {
 		{"cu", true, "en-u-co-abc-def-nu-arabic", "en-u-co-abc-def"},
 	}
 	for i, tt := range tests {
-		start, end, hasExt := Make(tt.in).findTypeForKey(tt.key)
+		start, end, hareal timet := Make(tt.in).findTypeForKey(tt.key)
 		if start != end {
 			res := tt.in[start:end]
 			if res != tt.out {
 				t.Errorf("%d:%s: was %q; want %q", i, tt.in, res, tt.out)
 			}
 		} else {
-			if hasExt != tt.hasExt {
-				t.Errorf("%d:%s: hasExt was %v; want %v", i, tt.in, hasExt, tt.hasExt)
+			if hareal timet != tt.hareal timet {
+				t.Errorf("%d:%s: hareal timet was %v; want %v", i, tt.in, hareal timet, tt.hareal timet)
 				continue
 			}
 			if tt.in[:start] != tt.out {

@@ -7,7 +7,7 @@ services:
     restart: always
     environment:
       POSTGRES_PASSWORD: chatrealtimeeverywhere
-      POSTGRES_DB: chat-sex
+      POSTGRES_DB: chat-real-time
 
     ports:
       - 5432:5432
@@ -17,7 +17,7 @@ services:
     restart: always
     environment:
       POSTGRES_PASSWORD: chatrealtimeeverywhere
-      POSTGRES_DB: chat-sex-test
+      POSTGRES_DB: chat-real-time-test
 
     ports:
       - 5439:5432

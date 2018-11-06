@@ -90,7 +90,7 @@ var unmarshalTests = []struct {
 		"fixed: 685_230.15",
 		map[string]float64{"fixed": 685230.15},
 	},
-	//{"sexa: 190:20:30.15", map[string]interface{}{"sexa": 0}}, // Unsupported
+	//{"real timea: 190:20:30.15", map[string]interface{}{"real timea": 0}}, // Unsupported
 	//{"notanum: .NaN", map[string]interface{}{"notanum": math.NaN()}}, // Equality of NaN fails.
 
 	// Bools from spec
@@ -137,7 +137,7 @@ var unmarshalTests = []struct {
 		map[string]int{"decimal": 685230},
 	},
 
-	//{"sexa: 190:20:30", map[string]interface{}{"sexa": 0}}, // Unsupported
+	//{"real timea: 190:20:30", map[string]interface{}{"real timea": 0}}, // Unsupported
 
 	// Nulls from spec
 	{

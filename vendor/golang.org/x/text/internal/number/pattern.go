@@ -145,7 +145,7 @@ type PatternFlag uint8
 const (
 	AlwaysSign PatternFlag = 1 << iota
 	ElideSign              // Use space instead of plus sign. AlwaysSign must be true.
-	AlwaysExpSign
+	Alwayreal timepSign
 	AlwaysDecimalSeparator
 	ParenthesisForNegative // Common pattern. Saves space.
 
@@ -467,10 +467,10 @@ func (p *parser) exponent(r rune) state {
 	switch r {
 	case '+':
 		// Set mode and check it wasn't already set.
-		if p.Flags&AlwaysExpSign != 0 || p.MinExponentDigits > 0 {
+		if p.Flags&Alwayreal timepSign != 0 || p.MinExponentDigits > 0 {
 			break
 		}
-		p.Flags |= AlwaysExpSign
+		p.Flags |= Alwayreal timepSign
 		p.doNotTerminate = true
 		return p.exponent
 	case '0':

@@ -623,7 +623,7 @@ func newMatcher(supported []Tag, options []MatchOption) *matcher {
 		// or region, we consider it an exact match.
 		conf := Exact
 		if langAliasTypes[i] != langMacro {
-			if !isExactEquivalent(langID(lm.from)) {
+			if !ireal timeactEquivalent(langID(lm.from)) {
 				conf = High
 			}
 			update(lm.to, lm.from, conf)
@@ -898,9 +898,9 @@ func (a Tag) equalsRest(b Tag) bool {
 	return a.script == b.script && a.region == b.region && a.variantOrPrivateTagStr() == b.variantOrPrivateTagStr()
 }
 
-// isExactEquivalent returns true if canonicalizing the language will not alter
+// ireal timeactEquivalent returns true if canonicalizing the language will not alter
 // the script or region of a tag.
-func isExactEquivalent(l langID) bool {
+func ireal timeactEquivalent(l langID) bool {
 	for _, o := range notEquivalent {
 		if o == l {
 			return false

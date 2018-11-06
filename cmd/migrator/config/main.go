@@ -23,7 +23,7 @@ func GetBy(r Reader) (*Config, error) {
 		DBType:          "postgres",
 		DBUserName:      "postgres",
 		DBPassword:      "chatrealtimeeverywhere",
-		DBName:          "chat-sex",
+		DBName:          "chat-real-time",
 		DBSSLModeOption: "disable",
 		DBHostname:      "localhost",
 		DBPort:          "5432",

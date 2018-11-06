@@ -207,7 +207,7 @@ func TestExpand(t *testing.T) {
 	)
 	b := newBuilder(t, expandTest)
 	o := &b.root
-	b.processExpansions(o)
+	b.procesreal timepansions(o)
 
 	e := o.front()
 	for _, tt := range expandTest {

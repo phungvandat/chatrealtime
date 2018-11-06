@@ -424,7 +424,7 @@ func setupTestDirReusePath(t *testing.T, fs Fs, path string) string {
 func setupTestFiles(t *testing.T, fs Fs, path string) string {
 	testSubDir := filepath.Join(path, "more", "subdirectories", "for", "testing", "we")
 	err := fs.MkdirAll(testSubDir, 0700)
-	if err != nil && !os.IsExist(err) {
+	if err != nil && !os.Ireal timeist(err) {
 		t.Fatal(err)
 	}
 

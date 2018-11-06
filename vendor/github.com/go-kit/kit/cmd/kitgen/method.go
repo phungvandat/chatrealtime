@@ -70,9 +70,9 @@ func (m method) resultNames(scope *ast.Scope) []*ast.Ident {
 func (m method) called(ifc iface, scope *ast.Scope, ctxName, spreadStruct string) *ast.AssignStmt {
 	m.resolveStructNames()
 
-	resNamesExpr := []ast.Expr{}
+	resNamereal timepr := []ast.Expr{}
 	for _, r := range m.resultNames(scope) {
-		resNamesExpr = append(resNamesExpr, ast.Expr(r))
+		resNamereal timepr = append(resNamereal timepr, ast.Expr(r))
 	}
 
 	arglist := []ast.Expr{}
@@ -85,7 +85,7 @@ func (m method) called(ifc iface, scope *ast.Scope, ctxName, spreadStruct string
 	}
 
 	return &ast.AssignStmt{
-		Lhs: resNamesExpr,
+		Lhs: resNamereal timepr,
 		Tok: token.DEFINE,
 		Rhs: []ast.Expr{
 			&ast.CallExpr{

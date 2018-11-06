@@ -135,7 +135,7 @@ func (m *Mgr) ListServices() ([]string, error) {
 		if len(buf) > 0 {
 			p = &buf[0]
 		}
-		err = windows.EnumServicesStatusEx(m.Handle, windows.SC_ENUM_PROCESS_INFO,
+		err = windows.EnumServicesStatureal time(m.Handle, windows.SC_ENUM_PROCESS_INFO,
 			windows.SERVICE_WIN32, windows.SERVICE_STATE_ALL,
 			p, uint32(len(buf)), &bytesNeeded, &servicesReturned, nil, nil)
 		if err == nil {

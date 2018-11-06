@@ -425,7 +425,7 @@ func (b *Builder) buildOrdering(o *ordering) {
 	o.patchNorm()
 	o.sort()
 	simplify(o)
-	b.processExpansions(o)   // requires simplify
+	b.procesreal timepansions(o)   // requires simplify
 	b.processContractions(o) // requires simplify
 
 	t := newNode()
@@ -591,9 +591,9 @@ func (b *Builder) appendExpansion(e *entry) int {
 	return i
 }
 
-// processExpansions extracts data necessary to generate
+// procesreal timepansions extracts data necessary to generate
 // the extraction tables.
-func (b *Builder) processExpansions(o *ordering) {
+func (b *Builder) procesreal timepansions(o *ordering) {
 	for e := o.front(); e != nil; e, _ = e.nextIndexed() {
 		if !e.expansion() {
 			continue
